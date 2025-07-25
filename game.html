@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari Si Curut!</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="icon" href="assets/gui/curut.png" type="image/png">
+</head>
+<body>
+    <div id="game-screen">
+        <div id="status">
+            <span class="label">Level: </span><span class="value" id="level">1</span><br>
+            <span class="label">Poin: </span><span class="value" id="poin">0</span>
+        </div>
+    
+        <div id="result">
+            <h1 id="result-text"></h1>
+        </div>
+    
+        <div id="goa-container"></div>
+    
+        <div id="buttons">
+            <button id="retry-button" onclick="resetGame()"></button>
+            <button id="menu-button" onclick="location.reload()"></button>
+        </div>
+    </div>
+    
+    <!-- Wrapper untuk Goa dengan tombol scroll -->
+    <div id="goa-wrapper">
+        <button id="scroll-left" class="scroll-button" onclick="scrollGoa(-1)">⟨</button>
+        <button id="scroll-right" class="scroll-button" onclick="scrollGoa(1)">⟩</button>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>

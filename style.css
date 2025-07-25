@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixel', sans-serif;
+    background: url('assets/background/background.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 0;
+    width: 90%; /* Gunakan persentase agar fleksibel */
+    max-width: 600px;
+}
+
+.judul-game {
+    width: 80%; /* Sesuaikan ukuran agar responsif */
+    max-width: 600px;
+    margin: -10px 0;
+    transition: all 0.5s ease 0s;
+}
+
+.judul-game:hover {
+    transform: rotate(2deg);
+}
+
+.curut {
+    width: 80px;
+    height: 80px;
+    margin: -10px 0;
+}
+
+.tombol {
+    width: 80%; /* Gunakan persentase untuk fleksibilitas */
+    max-width: 280px;
+    cursor: pointer;
+    display: block;
+    margin: -30px 0;
+    transition: transform 0.1s, filter 0.2s;
+}
+
+.tombol:hover {
+    filter: brightness(1.2);
+}
+
+.tombol:active {
+    transform: scale(0.95);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .judul-game {
+        width: 90%;
+        margin: -5px 0;
+    }
+
+    .curut {
+        width: 70px;
+        height: 70px;
+    }
+
+    .tombol {
+        width: 90%;
+        max-width: 200px;
+        margin: -20px 0;
+    }
+}
